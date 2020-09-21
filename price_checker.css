@@ -17,19 +17,19 @@ img{
   -moz-transition: width 1.2s;
   transition: width 1.2s;
 }
-.box.books {
+.box.electronics {
   background-color: #1c87c9;
 }
-.box.quizzes {
+.box.houshold {
   background-color: #666666;
 }
-.box.snippets {
+.box.entertainment {
   background-color: #e6ae2e;
 }
-.box.tools {
+.box.clothing {
   background-color: #8ebf42;
 }
-.box.functions {
+.box.toy {
   background-color: #eb4034;
 }
 .box a {
