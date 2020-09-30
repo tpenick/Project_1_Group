@@ -20,6 +20,12 @@
     margin: 20px;
 }
 
+#logo-text{
+  color:#5e2ced;
+  font-size:100%;
+  padding:30px 10px 10px 20px;
+}
+
 .center {
     display: block;
     margin-left: auto;

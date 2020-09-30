@@ -25,6 +25,7 @@
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <li class="menu-text" id="logo">Valshop</li>
+          <li class="menu-text" id="logo-text">Find the best prices near you.</li>
 
         </ul>
       </div>
@@ -88,7 +89,7 @@
       <!-- Dropdown list of item types and Search button -->
       <div>
         <select id="itemType" style="float: left; width: 200px; margin-top: 10px;">
-          <option value="">Select an Item</option>
+          <option value="">Select a category</option>
           <option value="Computer">Computer</option>
           <option value="Monitor">Monitor</option>
           <option value="Tablet">Tablet</option>
@@ -100,7 +101,7 @@
           <option value="Dishwasher">Dishwasher</option>
         </select>
         <a class="button secondary" id="search-btn"
-          style="float: left; padding-left: 15px; margin-top: 10px;">Search</a>
+          style="float: left; padding-left: 15px; margin-top: 10px; background: #5e2ced; color:white;">Search</a>
         <div id="loading" style="float: left; margin-left: 20%; padding-top: 0px;">
           <!-- Loading Animation -->
           <img src="assets/images/Preloader_10.gif">
@@ -148,7 +149,7 @@
       <div class="tabs-content" data-tabs-content="example-tabs">
         <div class="tabs-panel is-active" id="panel1">
           <h4>Find Location</h4>
-          <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+          <input id="pac-input" class="controls" type="text" placeholder="Type in your location, and a store name to find one near you." />
         </div>
 
         <div class="container" id="map_div">
