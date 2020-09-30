@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Copyright 2020 Valshop. All rights reserved. -->
+
+<head>
+  <!-- Meta Data -->
+  <meta charset="utf-8" />
+  <meta name="description"
+    content="Valshop provides provides users with top items from Google Shopping and eBay sites.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valshop</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="assets/css/valshop.css">
+  <script src="assets/js/google.js"></script>
+</head>
+
+<body>
+
+  <!-- Start Top Bar -->
+  <div class="top-bar" id="navbar">
+    <div class="row">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text" id="logo">Valshop</li>
+
+        </ul>
+      </div>
+
+      <!-- Weather Information -->
+      <div class="top-bar-right">
+        <div id="currentWeather">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Top Bar -->
+
+  <!-- Carosel of three items -->
+  <br>
+  <div class="row">
+    <div class="small-12 columns">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="assets/images/monitor1.jpg" style="width:80%" class="center">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="assets/images/tv2.jpg" style="width:80%" class="center">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="assets/images/appliances3.jpg" style="width:80%" class="center">
+      </div>
+    </div>
+
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="medium-6 columns">
+
+      <div class="row small-up-4">
+      </div>
+    </div>
+
+    <!-- Advertising and instruction paragraph -->
+    <div class="medium-12 columns" style="padding: 15px;">
+      <h3>My Awesome Price</h3>
+      <p>Check the weather in your area on this site. Is this a good day to shop outside?
+        Use the Google Map below to find the closet store to your home, otherwise shop online
+        with us. Track your best price in real-time, compare prices and make better pricing
+        decisions. We bring you the top items from Google Shopping and eBay sites. Select
+        the item of your interest and have a happy searching. Once the items are displayed,
+        click on each to view more details and purchase the item.</p>
+
+      <!-- Dropdown list of item types and Search button -->
+      <div>
+        <select id="itemType" style="float: left; width: 200px; margin-top: 10px;">
+          <option value="">Select an Item</option>
+          <option value="Computer">Computer</option>
+          <option value="Monitor">Monitor</option>
+          <option value="Tablet">Tablet</option>
+          <option value="TV">TV</option>
+          <option value="Cellphone">Cellphone</option>
+          <option value="Washer">Washing Machine</option>
+          <option value="Dryer">Dryer</option>
+          <option value="Refrigerator">Refrigerator</option>
+          <option value="Dishwasher">Dishwasher</option>
+        </select>
+        <a class="button secondary" id="search-btn"
+          style="float: left; padding-left: 15px; margin-top: 10px;">Search</a>
+        <div id="loading" style="float: left; margin-left: 20%; padding-top: 0px;">
+          <!-- Loading Animation -->
+          <img src="assets/images/Preloader_10.gif">
+        </div>
+      </div>
+    </div>
+
+    <!-- Results of Search Area: It contains two sections, one for Google and another one for eBay -->
+    <div class="row">
+      <hr>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+
+        <div class="grid-x grid-padding-x" style="border: 0px solid #e2e2eb; margin-top: -9px;">
+          <h1
+            style="font-size: 14px; padding: 15px 0px 0px 15px; width: 120px; height: 50px; background-color:#e6e6e6; color:#1779ba;">
+            Product Price</h1>
+
+          <div class="medium-6 columns" style="padding: 0px; margin-top: -8px; border-right: 1px solid white;">
+            <p
+              style="font-size: 23px; width: 100%; background-color: #e6e6e6; color: rgb(63, 63, 63); padding: 2px 0px 5px 15px;">
+              Google</p>
+            <div id="resultList1"
+              style="overflow: scroll; max-height: 300px; padding: 15px; border-right: 1px solid #e2e2eb; margin-top: -15px;">
+
+            </div>
+          </div>
+          <div class="medium-6 columns" style="padding: 0px; margin-top: -8px;">
+            <p
+              style="font-size: 23px; width: 100%; background-color: #e6e6e6; color: rgb(63, 63, 63); padding: 2px 0px 5px 15px;">
+              eBay</p>
+            <div id="resultList2" style="overflow: scroll; max-height: 300px; padding: 15px; margin-top: -15px;">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Map Area -->
+    <div class="column row">
+      <hr>
+      <ul class="tabs" data-tabs id="example-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Location</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <h4>Find Location</h4>
+          <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+        </div>
+
+        <div class="container" id="map_div">
+          <div class="row" id="location">
+            <div class="col-md-12" id="map">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+
+    <!-- Footer start here -->
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                <p class="mchimp-errmessage" style="display: none;"></p>
+                <p class="mchimp-sucmessage" style="display: none;"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <p class="mb-0 f_400">©Valshop Inc., 2020</p>
+            </div>
+            <div class="col-lg-6 col-sm-5 text-right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script>
+
+      $(document).foundation();
+
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000);
+      }
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script> -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initAutocomplete&libraries=places"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/weather.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

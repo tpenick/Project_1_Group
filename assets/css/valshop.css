@@ -26,6 +26,20 @@
     margin-right: auto;
     width: 50%;
   }
+  /*weather div*/
+  .top-bar-right{
+    /* background-color:rgb(83, 83, 85); */
+    /* border: solid 1px white; */
+    /* width:50%; */
+    color:#5e2ced;
+    padding:5px 15px 5px 15px;
+  }
+
+  #temp{
+    position:relative;
+    float:right;
+    padding-right:50%;
+  }
 
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
