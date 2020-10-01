@@ -38,5 +38,5 @@ The following image demonstrates the application functionality:
 (https://github.com/tpenick/Project_1_Group)
 
 ---
-© Valshop, Inc., Group 7 - Venus, Logique, Tim, Hatem, Muhammad
+© 2020 Valshop, Inc., Group 7 - Venus, Logique, Tim, Hatem, Muhammad
 
