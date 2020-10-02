@@ -11,7 +11,7 @@ var queryUrlWeather = "";
 var searchInput = "";
 
 // Get the user's location 
-$.get("http://ipinfo.io", function (response1) {
+$.get("https://ipinfo.io", function (response1) {
     
     queryUrlWeather = 'https://api.openweathermap.org/data/2.5/weather?q=' + response1.city + '&appid=' + apiKey1 + '&units=imperial';
 
