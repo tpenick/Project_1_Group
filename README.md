@@ -1,4 +1,4 @@
-# Project_1_Group
+# Project_1_Group: Valshop 
 
 When searching for and comparing items online, a consumer is often at a disadvantage as such information is generally located across many sites and different forums. Our solution is to create a web application where the user can select from various product categories and have the features and  pricing data displayed in one location. 
 
